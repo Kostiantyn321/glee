@@ -174,5 +174,110 @@
         position: absolute;
         right: 0;
     }
-    
+}
+
+
+.top-slider{
+    background-color: #fcd7b6;
+    &__inner{
+        max-width: 1430px;
+        margin: 0 auto;
+        padding: 100px 15px 45px 130px;
+    }
+    &__item{
+        display: flex !important;
+        justify-content: space-between;
+    }
+    &__title{
+        @extend %rubik-500;
+        color: $bg-text;
+        font-size: 72px;
+        line-height: 70px;
+        margin: 120px 0 40px;
+    }
+    &__text{
+        max-width: 365px;
+        @extend %rubik-400;
+        font-size: 18px;
+        line-height: 30px;
+        color: #436372;
+        margin-bottom: 35px;
+    }
+    &__link{
+        display: block;
+        position: relative;
+        width: 200px;
+        height: 60px;
+        background-color: $btn;
+        @extend %rubik-500;
+        color:#fff;
+        font-size: 15px;
+        line-height: 12px;
+        padding: 25px 20px 25px 27px;
+    }
+    &__link::after{
+        content: '';
+        position: absolute;
+        background-image: url('../images/icons/arrow-white.svg');
+        width: 22px;
+        height: 9px;
+        right: 20px;
+    }
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        margin-left: -150px;
+        li{
+            padding: 0 5px;
+            line-height: 0;
+            button{
+                padding: 0;
+                font-size: 11px;
+                line-height: 9px;
+                color: $bg-text;
+                @extend %rubik-500;
+                background-color: 'fff';
+                opacity: 0.302;
+                width: 29px;
+                height: 29px;
+                border-radius: 50%;
+                border: none;
+                position: relative;
+            }
+            &.slick-active{
+                button{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.info{
+    background-color: $bg;
+    display: flex;
+    justify-content: space-around;
+    padding: 45px 0;
+    &__item{
+        display: flex;
+        align-items: flex-start;
+    }
+    &__item-icon{
+        margin-right: 25px;
+    }
+    &__item-content{
+        width: 215px;
+    }
+    &__item-title{
+        font-size: 18px;
+        line-height: 1;
+        color: #414141;
+        @extend %dmsans-700;
+        margin-bottom: 12px;
+    }
+    &__item-text{
+        font-size: 16px;
+        line-height: 30px;
+        color: #585858;
+        @extend %dmsans-400;
+    }
 }
