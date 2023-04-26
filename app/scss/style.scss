@@ -417,3 +417,21 @@
         right: 20px;
     }
 }
+.design{
+    margin-bottom: 120px;
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px 30px;
+        min-height: 527px;
+    }
+    &__item{
+        padding: 40px 35px;
+    }
+    &__title{
+        font-size: 20px;
+        color: $default;
+        max-width: 175px;
+        margin-bottom: 15px;
+    }
+}
