@@ -31,12 +31,46 @@ a{
     line-height: 22px;
     @extend %rubik-400;
 }
+.top-title{
+    font-size: 36px;
+    color: #222933;
+    @extend %rubik-400;
+    margin-bottom: 15px;
+}
 .title{
     font-size: 36px;
     color: #191919;
     @extend %dmsans-700;
     text-align: center;
     margin-bottom: 30px;
+}
+.breadcrumbs{
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    &__list{
+        display: flex;
+    }
+    &__item{
+        color: #737980;
+        padding-right: 20px;
+        position: relative;
+        &::after{
+            content: '/';
+            position: absolute;
+            @extend %rubik-400;
+            right: 6px;
+        }
+        &:last-child{
+            padding-right: 0;
+            &::after{
+                display: none;
+            }
+        }
+    }
+    &__link{
+        color: inherit;
+    }
 }
 .product-title{
     color: $bg-text;
