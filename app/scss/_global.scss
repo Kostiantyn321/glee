@@ -4,7 +4,7 @@ body{
 }
 body {
     font-size: 16px;
-    line-height: 40px;
+    line-height: 24px;
     color: $item-text;
     font-weight: 700;
     @extend %dmsans-700;
@@ -30,4 +30,19 @@ a{
     font-size: 14px;
     line-height: 22px;
     @extend %rubik-400;
+}
+.title{
+    font-size: 36px;
+    color: #191919;
+    @extend %dmsans-700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.product-title{
+    color: $bg-text;
+    @extend %dmsans-500;
+    margin-bottom: 5px;
+}
+.product-price{
+    margin-bottom: 35px;
 }
