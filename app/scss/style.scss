@@ -87,6 +87,15 @@
     line-height: 22px;
     @extend %rubik-400;
 }
+.partners{
+    background-color: $bg;
+    &__list{
+        height: 250px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
 .footer-top{
     padding: 80px 0 75px;
     border-bottom: 1px solid #dae4e9;
