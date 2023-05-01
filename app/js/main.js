@@ -20,7 +20,13 @@ $(function() {
         $('.filter-price__to').text(data.to);
       },
   });
-
+  $(".star").rateYo({
+    starWidth: "18px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    spacing: "13px",
+    readOnly: true
+  });
   $(".star-small").rateYo({
     starWidth: "10px",
     normalFill: "#d6d6d6",
