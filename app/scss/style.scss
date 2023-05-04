@@ -283,7 +283,7 @@
         font-size: 18px;
         line-height: 1;
         color: #414141;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
     }
     &__item-text{
         line-height: 30px;
@@ -294,21 +294,25 @@
 .product{
     padding: 70px 0 100px;
     text-align: center;
-    &__list{
+    &__tabs{
         display: flex;
         justify-content: center;
         gap: 30px;
         margin-bottom: 80px;
     }
-    &__list-link{
+    &__tabs-link{
         @extend %dmsans-700;
         font-size: 16px;
         color: #8b8b8b;
     }
-    &__list-link--active{
+    &__tabs-link--active{
         color: #1a1a1a;
     }
-    &__content{
+    &__tabs-content{
+        display: none;
+    }
+    &__tabs-content--active{
+        display: block;
         margin-bottom: 185px;
     }
     &__items{
@@ -316,6 +320,7 @@
         flex-wrap: wrap;
         gap: 40px 30px;
         text-align: center;
+        justify-content: center;
     }
 }
 .product-item{
@@ -431,14 +436,36 @@
 }
 .design{
     margin-bottom: 120px;
-    &__items{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 35px 30px;
-        min-height: 527px;
+    &__tabs{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 80px;
     }
+    &__tabs-link{
+        @extend %dmsans-700;
+        font-size: 16px;
+        color: #8b8b8b;
+    }
+    &__tabs-link--active{
+        color: #1a1a1a;
+    }
+    &__tabs-items{
+        display: none;
+    }
+    &__tabs-items--active{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 35px 30px;
+    }
+
     &__item{
         padding: 40px 35px;
+        max-width: 370px;
+        width: 100%;
+        height: 246px;
+        border-radius: 5px;
     }
     &__title{
         font-size: 20px;
@@ -467,7 +494,7 @@
 }
 
 .articles{
-    margin-bottom: -182px;
+    margin-bottom: -190px;
     &__header{
         display: flex;
         justify-content: space-between;

@@ -88,6 +88,7 @@ body {
     }
 
     &__item {
+        
     }
     
     &__link {
@@ -98,6 +99,7 @@ body {
         justify-content: center;
         align-items: center;
         margin-right: 15px;
+        color: $text;
     }
 
     &__link--active {
@@ -111,5 +113,6 @@ body {
         border: 1px solid $btn;
         justify-content: center;
         align-items: center;
+        color: $text;
     }
 }
