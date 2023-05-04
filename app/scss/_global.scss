@@ -5,9 +5,9 @@ body{
 body {
     font-size: 16px;
     line-height: 24px;
-    color: $item-text;
-    font-weight: 700;
-    @extend %dmsans-700;
+    color: $text;
+    font-weight: 400;
+    @extend %rubik-400;
     display: flex;
     flex-direction: column;
 }
@@ -23,13 +23,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-}
-
-a{
-    color: $footer;
-    font-size: 14px;
-    line-height: 22px;
-    @extend %rubik-400;
 }
 .top-title{
     font-size: 36px;
@@ -58,7 +51,6 @@ a{
         &::after{
             content: '/';
             position: absolute;
-            @extend %rubik-400;
             right: 6px;
         }
         &:last-child{
@@ -73,11 +65,16 @@ a{
     }
 }
 .product-title{
-    color: $bg-text;
+    color: $text;
     @extend %dmsans-500;
     margin-bottom: 5px;
 }
 .product-price{
+    font-size: 16px;
+    line-height: 24px;
+    color: $item-text;
+    font-weight: 700;
+    @extend %dmsans-700;
     margin-bottom: 35px;
 }
 
@@ -101,9 +98,6 @@ a{
         justify-content: center;
         align-items: center;
         margin-right: 15px;
-        font-size: 16px;
-        color: $bg-text;
-        @extend %rubik-400;
     }
 
     &__link--active {
@@ -114,11 +108,8 @@ a{
         display: flex;
         width: 74px;
         height: 50px;
-        border: 1px solid #a3bbc8;
+        border: 1px solid $btn;
         justify-content: center;
         align-items: center;
-        font-size: 16px;
-        color: $bg-text;
-        @extend %rubik-400;
     }
 }
