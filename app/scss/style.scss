@@ -555,17 +555,36 @@
         @extend %dmsans-500;
     }
     &__item-info{
-        padding-top: 15px;
+        padding: 15px 0 0 5px;
         display: flex;
         align-items: center;
         gap: 25px;
     }
+
     &__item-date,
     &__item-author{
+        display: inline-block;
+        position: relative;
         text-transform: uppercase;
+        padding-left: 20px;
         font-size: 14px;
         color: #222933;
         @extend %dmsans-500;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+        }
+    }
+    &__item-date::before{
+        background-image: url('../images/icons/calendar-articles.svg');
+        width: 12px;
+    }
+    &__item-author::before{
+        background-image: url('../images/icons/user-grey.svg');
     }
 }
 .partners-big{
