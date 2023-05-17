@@ -18,6 +18,49 @@ $(function() {
     $($(this).attr('href')).addClass('design__tabs-items--active');
   });
 
+  $('.product-tabs__top-item').on('click', function(e){
+    e.preventDefault();
+    $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+    $(this).addClass('product-tabs__top-item--active');
+
+    $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+    $($(this).attr('href')).addClass('product-tabs__content-item--active');
+  });
+
+
+  $('.product-slide__thumb').slick({
+    asNavFor: '.product-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false
+  });
+  $('.product-slide__big').slick({
+    asNavFor: '.product-slide__thumb',
+    draggable: false,
+    arrows: false,
+    fade: true,
+    responsive:[
+      {
+        breakpoint: 1051,
+        settings: {
+          draggable: true,
+        }
+      },
+    ]
+  });
+
+  $('.select-style, .product-one__num').styler();
+
+  $('.product-slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: false,
+    prevArrow: '<button type="button" class="slick-prev"><svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 9" width="22" height="9"><path fill="#a3bbc8" d="m21.7 3.5h-16.9l0.1-2.8q0-0.1 0-0.2 0-0.2 0-0.2l-0.2-0.2q-0.1-0.1-0.2-0.1-0.1 0-0.2 0.1l-4.2 4.2q-0.1 0.1-0.1 0.2 0 0.1 0.1 0.2l4.2 4.2q0.1 0.1 0.2 0.1 0.1 0 0.2-0.1l0.2-0.2q0 0 0-0.2 0-0.1 0-0.2l-0.2-2.8h17c0.2 0 0.3-0.2 0.3-0.3v-1.4c0-0.1-0.1-0.3-0.3-0.3z"/></svg></button>',
+    nextArrow: '<button type="button" class="slick-next"><svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 9" width="22" height="9"><path fill="#a3bbc8" d="m0.3 5.5h16.9l-0.1 2.8q0 0.1 0 0.2 0 0.2 0 0.2l0.2 0.2q0.1 0.1 0.2 0.1 0.1 0 0.2-0.1l4.2-4.2q0.1-0.1 0.1-0.2 0-0.1-0.1-0.2l-4.2-4.2q-0.1-0.1-0.2-0.1-0.1 0-0.2 0.1l-0.2 0.2q0 0 0 0.2 0 0.1 0 0.2l0.2 2.8h-17c-0.2 0-0.3 0.2-0.3 0.3v1.4c0 0.1 0.1 0.3 0.3 0.3z"/></svg></button>'
+  });
+
   $('.top-slider__items').slick({
       dots: true,
       arrows: false,

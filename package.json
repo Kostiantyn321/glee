@@ -23,5 +23,8 @@
   },
   "author": "Kostiantyn Zinchenko",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "jquery-form-styler": "^2.0.2"
+  }
 }
