@@ -1,10 +1,9 @@
-$default: #1a1a1a;
 $item-text: #a3bbc8;
 $footer: #7b7b7b;
-$bg-text: #243f4d;
+$text: #243f4d;
 $bg: #fef7f0;
-$item-bg: #f8f8f8;
 $btn: #a3bbc8;
+$top: #edf1f4;
 
 %dmsans-400{
     font-family: 'DMSans-Regular', sans-serif;
@@ -25,4 +24,12 @@ $btn: #a3bbc8;
 %rubik-500{
     font-family: 'Rubik-Medium', sans-serif;
     font-weight: 500;
+}
+
+%checkbox-hidden{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
 }

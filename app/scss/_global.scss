@@ -4,10 +4,10 @@ body{
 }
 body {
     font-size: 16px;
-    line-height: 40px;
-    color: $item-text;
-    font-weight: 700;
-    @extend %dmsans-700;
+    line-height: 24px;
+    color: $text;
+    font-weight: 400;
+    @extend %rubik-400;
     display: flex;
     flex-direction: column;
 }
@@ -24,10 +24,90 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
-
-a{
-    color: $footer;
-    font-size: 14px;
-    line-height: 22px;
+.top-title{
+    font-size: 36px;
+    color: #222933;
     @extend %rubik-400;
+    margin-bottom: 15px;
+}
+.title{
+    font-size: 36px;
+    color: #191919;
+    @extend %dmsans-700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.breadcrumbs{
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    &__list{
+        display: flex;
+    }
+    &__item{
+        color: #737980;
+        padding-right: 20px;
+        position: relative;
+        &::after{
+            content: '/';
+            position: absolute;
+            right: 6px;
+        }
+        &:last-child{
+            padding-right: 0;
+            &::after{
+                display: none;
+            }
+        }
+    }
+    &__link{
+        color: inherit;
+    }
+}
+.product-title{
+    color: $text;
+    @extend %dmsans-500;
+    margin-bottom: 5px;
+}
+.product-price{
+    font-size: 16px;
+    line-height: 24px;
+    color: $item-text;
+    font-weight: 700;
+    @extend %dmsans-700;
+    margin-bottom: 35px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 105px;
+    &__list {
+        display: flex;
+    }
+    &__link {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $btn;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+        color: $text;
+    }
+
+    &__link--active {
+        color: #fff;
+        background-color: $btn;
+    }
+    &__next {
+        display: flex;
+        width: 74px;
+        height: 50px;
+        border: 1px solid $btn;
+        justify-content: center;
+        align-items: center;
+        color: $text;
+    }
 }
