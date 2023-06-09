@@ -1,5 +1,15 @@
 $(function() {
 
+  $('.menu__btn').on('click', function() {
+    $('.menu__btn').toggleClass('menu__btn--active');
+    $('.menu__list').toggleClass('menu__list--active');
+  });
+
+  $('.menu__list-link').on('click', function() {
+      $('.menu__btn').removeClass('menu__btn--active');
+      $('.menu__list').removeClass('menu__list--active');
+  });
+
   $('.product__tabs-link').on('click', function(e){
     e.preventDefault();
     $('.product__tabs-link').removeClass('product__tabs-link--active');
@@ -27,6 +37,9 @@ $(function() {
     $($(this).attr('href')).addClass('product-tabs__content-item--active');
   });
 
+  $('.product-list__filters-btn').on('click', function(){
+    $('.product-list__filters').slideToggle();
+  });
 
   $('.product-slide__thumb').slick({
     asNavFor: '.product-slide__big',
@@ -58,7 +71,27 @@ $(function() {
     slidesToScroll: 1,
     infinite: false,
     prevArrow: '<button type="button" class="slick-prev"><svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 9" width="22" height="9"><path fill="#a3bbc8" d="m21.7 3.5h-16.9l0.1-2.8q0-0.1 0-0.2 0-0.2 0-0.2l-0.2-0.2q-0.1-0.1-0.2-0.1-0.1 0-0.2 0.1l-4.2 4.2q-0.1 0.1-0.1 0.2 0 0.1 0.1 0.2l4.2 4.2q0.1 0.1 0.2 0.1 0.1 0 0.2-0.1l0.2-0.2q0 0 0-0.2 0-0.1 0-0.2l-0.2-2.8h17c0.2 0 0.3-0.2 0.3-0.3v-1.4c0-0.1-0.1-0.3-0.3-0.3z"/></svg></button>',
-    nextArrow: '<button type="button" class="slick-next"><svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 9" width="22" height="9"><path fill="#a3bbc8" d="m0.3 5.5h16.9l-0.1 2.8q0 0.1 0 0.2 0 0.2 0 0.2l0.2 0.2q0.1 0.1 0.2 0.1 0.1 0 0.2-0.1l4.2-4.2q0.1-0.1 0.1-0.2 0-0.1-0.1-0.2l-4.2-4.2q-0.1-0.1-0.2-0.1-0.1 0-0.2 0.1l-0.2 0.2q0 0 0 0.2 0 0.1 0 0.2l0.2 2.8h-17c-0.2 0-0.3 0.2-0.3 0.3v1.4c0 0.1 0.1 0.3 0.3 0.3z"/></svg></button>'
+    nextArrow: '<button type="button" class="slick-next"><svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 9" width="22" height="9"><path fill="#a3bbc8" d="m0.3 5.5h16.9l-0.1 2.8q0 0.1 0 0.2 0 0.2 0 0.2l0.2 0.2q0.1 0.1 0.2 0.1 0.1 0 0.2-0.1l4.2-4.2q0.1-0.1 0.1-0.2 0-0.1-0.1-0.2l-4.2-4.2q-0.1-0.1-0.2-0.1-0.1 0-0.2 0.1l-0.2 0.2q0 0 0 0.2 0 0.1 0 0.2l0.2 2.8h-17c-0.2 0-0.3 0.2-0.3 0.3v1.4c0 0.1 0.1 0.3 0.3 0.3z"/></svg></button>',
+    responsive:[
+      {
+        breakpoint: 1150,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 890,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 660,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
   });
 
   $('.top-slider__items').slick({
